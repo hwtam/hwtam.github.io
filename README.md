@@ -1,1 +1,1 @@
-[trying github.io](home.htm)
+[Link to the static website](https://hwtam.github.io/)
