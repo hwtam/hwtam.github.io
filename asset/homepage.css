@@ -2,4 +2,6 @@
 
 ul {
   list-style-type: none;
+  padding-inline-start: 30px;
+  margin-block-end: 10px;
 }
