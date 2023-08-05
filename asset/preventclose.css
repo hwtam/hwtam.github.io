@@ -1,6 +1,10 @@
 @import url(dark.css);
 
 body {
-  font-size: 150%;
   text-align: center;
 }
+
+h1 {
+  font-size: 1.3em;
+}
+

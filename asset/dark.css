@@ -1,7 +1,7 @@
 body {
   background-color:rgb(30,39,49);
   color: #dddddd;
-  font-size: 200%;
+  font-size: 2em;
   margin: 50px;
 }
 
@@ -11,5 +11,5 @@ a {
 
 a:hover {
   text-decoration: none;
-  font-size: 105%;
+  font-size: 1.1em;
 }
