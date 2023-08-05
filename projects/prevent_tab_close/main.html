@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>prevent close</title>
+  <link rel="stylesheet" href="/asset/dark.css">
+</head>
+<body>
+
+  <h1>Prevent </h1>
+
+  <p id="demo">This is a paragraph.</p>
+
+  <script>
+    window.onbeforeunload = function() {
+      return "Would you really like to close your browser?";
+    };
+  </script>
+
+</body>
+</html>
+
+<!--
+  This page is just a redesign of "https://maki-chan.de/preventclose.htm"
+-->
