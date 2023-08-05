@@ -1,0 +1,15 @@
+body {
+  background-color:rgb(30,39,49);
+  color: #dddddd;
+  font-size: 2em;
+  margin: 50px;
+}
+
+a {
+  color: #dddddd;
+}
+
+a:hover {
+  text-decoration: none;
+  font-style: italic;
+}
