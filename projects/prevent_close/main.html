@@ -25,11 +25,13 @@
     };
 
     window.addEventListener('focusout', function(event) {
-      document.write("should be not working")
+      document.write("should be not working");
+      console.log("out");
     });
     
     window.addEventListener('focus', function(event) {
-      document.write("should be working well")
+      document.write("should be working well");
+      console.log("on");
     });
 /*
     function fun1() {
