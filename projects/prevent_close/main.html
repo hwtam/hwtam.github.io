@@ -25,23 +25,12 @@
     };
 
     window.addEventListener('blur', function(event) {
-      //document.write("should be not working");
-      console.log("out");
+      document.getElementById("bool").innerHTML = "may not work";
     });
     
     window.addEventListener('focus', function(event) {
-      //document.write("should be working well");
-      console.log("in");
+      document.getElementById("bool").innerHTML = "may work";
     });
-/*
-    function fun1() {
-      document.getElementById(bool).innerHTML("should be not working")
-    }
-
-    function fun2() {
-      document.getElementById(bool).innerHTML("should be working well")
-    }
-*/
 
 // if you try to duplicate the tab, the older tab won't work well.
   </script>
