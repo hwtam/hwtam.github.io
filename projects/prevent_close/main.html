@@ -24,12 +24,12 @@
       return "Would you really like to close your browser?";
     };
 
-    window.addEventListener('blur', function(event) {
-      document.getElementById("bool").innerHTML = "may not work";
-    });
-    
-    window.addEventListener('focus', function(event) {
-      document.getElementById("bool").innerHTML = "may work";
+    document.addEventListener('visibilitychange', function(event) {
+      if (document.visibilityState === 'visible') {
+        document.getElementById("bool").innerHTML = "may work";
+      } else {
+        document.getElementById("bool").innerHTML = "may not work";
+      }
     });
 
 // if you try to duplicate the tab, the older tab won't work well. Other event handler works well(focus).
