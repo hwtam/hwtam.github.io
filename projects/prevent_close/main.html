@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prevent browser close tab</title>
+  <title>Prevent browser close tab-testing</title>
   <link rel="stylesheet" href="/asset/css/preventclose.css">
   <link rel="icon" href="/asset/img/brain.ico">
 </head>
@@ -24,6 +24,9 @@
 
     if (typeof window.onbeforeunload !== "function") {
       window.alert("not working");
+    }
+    else {
+      document.write("it should be ok")
     }
   </script>
 
