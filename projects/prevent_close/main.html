@@ -6,6 +6,7 @@
   <title>Prevent browser close tab-testing</title>
   <link rel="stylesheet" href="/asset/css/preventclose.css">
   <link rel="icon" href="/asset/img/brain.ico">
+
 </head>
 <body>
 
@@ -19,21 +20,7 @@
 
   <p id="bool"></p>
 
-  <script>
-    window.onbeforeunload = function() {
-      return "Would you really like to close your browser?";
-    };
-
-    document.addEventListener('visibilitychange', function(event) {
-      if (document.visibilityState === 'visible') {
-        document.getElementById("bool").innerHTML = "may work";
-      } else {
-        document.getElementById("bool").innerHTML = "may not work";
-      }
-    });
-
-// for example : if you try to duplicate the tab, it won't work well. Other event handler works well(focus).
-  </script>
+  <script src="/asset/js/preventclose.js"></script>
 
 </body>
 </html>
