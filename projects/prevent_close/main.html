@@ -24,10 +24,14 @@
       return "Would you really like to close your browser?";
     };
 
-    window.addEventListener('pagehide', fun1);
+    window.addEventListener('focusout', function(event) {
+      document.getElementById(bool).innerHTML("should be not working")
+    });
     
-    window.addEventListener('focus', fun2);
-
+    window.addEventListener('focus', function(event) {
+      document.getElementById(bool).innerHTML("should be working well")
+    });
+/*
     function fun1() {
       document.getElementById(bool).innerHTML("should be not working")
     }
@@ -35,7 +39,7 @@
     function fun2() {
       document.getElementById(bool).innerHTML("should be working well")
     }
-
+*/
 
 // if you try to duplicate the tab, the older tab won't work well.
   </script>
