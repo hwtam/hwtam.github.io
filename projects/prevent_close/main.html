@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/asset/css/preventclose.css">
   <link rel="icon" href="/asset/img/brain.ico">
 </head>
-<body>
+<body onfocusout="fun1()" onfocus="fun2()">
 
   <h1>Just leave this tab open and your browser won't be closed automatically</h1>
 
@@ -17,17 +17,23 @@
     .
   </p>
 
+  <p id="bool"></p>
+
   <script>
     window.onbeforeunload = function() {
       return "Would you really like to close your browser?";
     };
 
-    if (typeof window.onbeforeunload !== "function") {
-      document.write("not working");
+    function fun1() {
+      document.getElementById(bool).innerHTML("should be not working")
     }
-    else {
-      document.write("it should be ok")
+
+    function fun2() {
+      document.getElementById(bool).innerHTML("should be working well")
     }
+
+
+// if you try to duplicate the tab, the older tab won't work well.
   </script>
 
 </body>
