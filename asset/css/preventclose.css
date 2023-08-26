@@ -8,3 +8,11 @@ h1 {
   font-size: 1.3em;
 }
 
+#changable {
+  display: inline-block;
+  font-size: 50px;
+  color: #e5d6f9;
+  margin-top: 100px;
+  padding: 10px;
+  border: 20px dotted #bb86fc;
+}
