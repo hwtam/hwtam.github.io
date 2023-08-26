@@ -5,7 +5,7 @@ window.onbeforeunload = function() {
 
 // others
 window.onpageshow = function() {
-  document.getElementById("changable").style = "display: block";
+  document.getElementById("changable").style = "display: inline-block";
 };
 
 window.onclick = function() {

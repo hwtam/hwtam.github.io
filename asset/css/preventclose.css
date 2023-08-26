@@ -9,6 +9,7 @@ h1 {
 }
 
 #changable {
+  display: inline-block;
   font-size: 50px;
   color: #bb86fc;
   margin-top: 100px;
