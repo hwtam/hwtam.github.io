@@ -4,13 +4,12 @@ window.onbeforeunload = function() {
 };
 
 // testing
-document.addEventListener('visibilitychange', function() {
-  if (document.visibilityState === 'visible') {
-    document.getElementById("bool").innerHTML = "may work";
-  } else {
-    document.getElementById("bool").innerHTML = "may not work";
-  }
-});
+window.onunload = function() {
+  document.getElementById("changable").innerHTML = "Please <strong>click</strong> anywhere to activate the script.";
+};
 
+window.onclick = function() {
+  document.getElementById("changable").innerHTML = '';
+};
 // To Do
 // for example : if you try to duplicate the tab, it won't work well. Other event handler works well(focus).
