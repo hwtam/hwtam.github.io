@@ -11,8 +11,8 @@ h1 {
 #changable {
   display: inline-block;
   font-size: 50px;
-  color: #bb86fc;
+  color: #e5d6f9;
   margin-top: 100px;
   padding: 10px;
-  border: 20px dotted #7d53cc;
+  border: 20px dotted #bb86fc;
 }
