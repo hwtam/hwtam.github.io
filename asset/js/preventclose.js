@@ -9,5 +9,5 @@ window.onpageshow = function() {
 };
 
 window.onclick = function() {
-  document.getElementById("changable").innerHTML = '';
+  document.getElementById("changable").style = 'display: none';
 };
