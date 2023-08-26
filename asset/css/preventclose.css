@@ -8,3 +8,9 @@ h1 {
   font-size: 1.3em;
 }
 
+#changable {
+  font-size: 3em;
+  color: #bb86fc;
+  margin-top: 100px;
+  border: 1.5em solid #7d53cc;
+}
