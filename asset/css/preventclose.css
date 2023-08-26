@@ -12,5 +12,6 @@ h1 {
   font-size: 50px;
   color: #bb86fc;
   margin-top: 100px;
-  border: 20px solid #7d53cc;
+  padding: 10px;
+  border: 20px dotted #7d53cc;
 }
