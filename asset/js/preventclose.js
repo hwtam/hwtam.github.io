@@ -4,7 +4,7 @@ window.onbeforeunload = function() {
 };
 
 // testing
-window.onunload = function() {
+window.onpageshow = function() {
   document.getElementById("changable").innerHTML = "Please <strong>click</strong> anywhere to activate the script.";
 };
 
