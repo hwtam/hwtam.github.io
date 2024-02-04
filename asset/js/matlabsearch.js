@@ -9,6 +9,7 @@ form.addEventListener('submit', function(event) {
   // Check if the URL exists
   var xhr = new XMLHttpRequest();
   xhr.open('HEAD', url, true);
+  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
