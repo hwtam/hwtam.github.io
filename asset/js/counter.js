@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue , set} from "firebase/database";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
+import { getDatabase, ref, onValue , set} from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,7 +17,6 @@ const firebaseConfig = {
   databaseURL: "https://tomtom-try-default-rtdb.firebaseio.com"
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
@@ -30,13 +29,13 @@ const counter = document.querySelector('#counter');
 onValue(counterRef, (snapshot) => {
   const data = snapshot.val();
   console.log(data);
-  counter.innerText = data;
+  counter.innerText = data.value;
 });
 
 // Increment the counter when the button is clicked
 button.addEventListener('click', () => {
   const value = counter.innerText;
   set(counterRef, {
-    value: value + 1,
+    value: parseInt(value) + 1,
   });
 });
