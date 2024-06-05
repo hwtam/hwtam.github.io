@@ -1,5 +1,11 @@
 // main
-window.onbeforeunload = preventDefault;
+// window.onbeforeunload = function() {
+//   return "Would you really like to close your browser?";
+// };
+
+window.addEventListener("beforeunload", function(e) {
+  e.preventDefault();
+});
 
 // others
 window.onpageshow = function() {
