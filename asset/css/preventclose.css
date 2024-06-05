@@ -2,6 +2,7 @@
 
 body {
   text-align: center;
+  margin-top: 100px;
 }
 
 h1 {
@@ -11,8 +12,28 @@ h1 {
 #changable {
   display: inline-block;
   font-size: 50px;
-  color: #e5d6f9;
+  color: #bb86fc;
   margin-top: 100px;
   padding: 10px;
-  border: 20px dotted #bb86fc;
+}
+
+#closeTab {
+  position: fixed;
+  top: 20px; 
+  right: 30px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  border: 2px solid #bb86fc;
+  border-radius: 50%;
+  color: #bb86fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeTab:hover {
+  background-color: #bb86fc;
+  color: rgb(30,39,49);
 }

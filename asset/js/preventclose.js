@@ -1,10 +1,14 @@
 // main
-// window.onbeforeunload = function() {
-//   return "Would you really like to close your browser?";
-// };
-
-window.addEventListener("beforeunload", function(e) {
+const preventClose = (e) => {
   e.preventDefault();
+};
+
+window.addEventListener("beforeunload", preventClose);
+
+const button_close = document.querySelector("#closeTab");
+button_close.addEventListener("click", () => {
+  window.removeEventListener("beforeunload", preventClose);
+  window.location.reload();
 });
 
 // others
