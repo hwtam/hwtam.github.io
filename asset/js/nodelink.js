@@ -146,6 +146,11 @@ function updateXY(e) {
   mouseY = parseInt(e.pageY);
 }
 
+function updateXY_mobile(e) {
+  mouseX = parseInt(e.touches[0].pageX);
+  mouseY = parseInt(e.touches[0].pageY);
+} 
+
 svg.addEventListener('mousedown', (e) => {
   updateXY(e);
   updateStartPoint();
@@ -157,7 +162,18 @@ svg.addEventListener('mousedown', (e) => {
   }
 });
 
-svg.addEventListener('mouseup', () => {
+svg.addEventListener('touchstart', (e) => {
+  updateXY_mobile(e);
+  updateStartPoint();
+  if (!timer) {
+    timer = setInterval((e) => {
+      PressTime++;
+      updateSvg();
+    }, 10);
+  }
+});
+
+function up() {
   if (connected) {
     if (line_to_remove) {
       svg.removeChild(line_to_remove);
@@ -194,10 +210,21 @@ svg.addEventListener('mouseup', () => {
     line_to_remove.classList.remove("beRemoved");
     line_to_remove = null;
   }
-});
+}
+
+svg.addEventListener('mouseup', up);
+
+svg.addEventListener('touchend', up);
 
 svg.addEventListener('mousemove', (e) => {
   updateXY(e);
+  if (timer) {
+    updateSvg();
+  }
+});
+
+svg.addEventListener('touchmove', (e) => {
+  updateXY_mobile(e);
   if (timer) {
     updateSvg();
   }
