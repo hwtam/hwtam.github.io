@@ -21,8 +21,22 @@ svg {
   height: 100%;
 }
 
-line {
+#line1 {
   stroke: #f0f0f0;
   stroke-width: 2;
+  display: none;
+}
+
+#line2 {
+  stroke: #f0f0f0;
+  stroke-width: 2;
+  display: none;
+}
+
+circle {
+  fill: white;
+}
+
+#approaching {
   display: none;
 }
