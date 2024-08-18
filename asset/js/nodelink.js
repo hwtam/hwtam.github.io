@@ -17,7 +17,7 @@ const approaching = svg.querySelector("#approaching");
 function updateApproaching() {
   var x1 = parseInt(closest_pt.getAttribute("cx"));
   var y1 = parseInt(closest_pt.getAttribute("cy"));
-  var d = (PressTime * 0.8) ** 1.4;
+  var d = (PressTime * 1.5) ** 1.4;  // change the speed of approaching
   var newX;
   var newY;
   if (connected || (d > Math.sqrt((mouseX - x1) ** 2 + (mouseY - y1) ** 2))) {
