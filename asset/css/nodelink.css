@@ -17,6 +17,12 @@ p {
   user-select: none;
 }
 
+@media screen and (max-width: 400px) {
+  p {
+    font-size: small;
+  }
+}
+
 svg {
   width: 100%;
   height: 100%;
